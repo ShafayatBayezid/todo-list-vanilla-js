@@ -1,0 +1,133 @@
+/*-- Common Style --*/
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons+Outlined");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --bodyBackground: #f2f4f8;
+  --listBG: #e4e8ee;
+  --clr-todo-yellow: #f58725;
+  --clr-todo-paste: #3cbcad;
+  --clr-black: #000;
+  --clr-dark-1: #333;
+  --clr-gray: #ccc;
+  --clr-white: #fff;
+  --clr-red: #cf4040;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bodyBackground);
+  font-family: var(--font-poppins);
+  line-height: 28px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  visibility: visible;
+  color: var(--clr-dark-1);
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--clr-dark-1);
+  font-weight: 400;
+  margin-top: 0;
+  font-family: var(--font-poppins);
+}
+
+.body-wrapper {
+  position: relative;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+@media only screen and (max-width: 1140px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+/* nav styles */
+.nav-area {
+  background-color: var(--clr-white);
+  box-shadow: 0px 7px 10px 0px rgba(181, 181, 181, 0.75);
+  -webkit-box-shadow: 0px 7px 10px 0px rgba(181, 181, 181, 0.75);
+  -moz-box-shadow: 0px 7px 10px 0px rgba(181, 181, 181, 0.75);
+}
+
+.nav {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+.nav .brand-logo {
+  width: 130px;
+}
+.nav .brand-logo img {
+  width: 100%;
+}
+
+.nav .nav-list {
+  /* display: none; */
+}
+.nav-list .btn {
+  color: var(--clr-white);
+  background-color: var(--clr-todo-yellow);
+  padding: 7px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+.nav-list .btn a {
+  color: var(--clr-white);
+}
+.nav-list .btn:hover{
+  background-color: var(--clr-todo-paste);
+}
+
+/* button styles */
+button {
+  color: var(--clr-white);
+  background-color: var(--clr-todo-yellow);
+  padding: 7px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--clr-todo-paste);
+}

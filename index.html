@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/form.css" />
+    <link rel="stylesheet" href="assets/css/todoList.css" />
+    <link rel="stylesheet" href="assets/css/clock.css" />
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <div class="nav-area">
+        <div class="container">
+          <div class="nav">
+            <div class="brand-logo">
+              <a href="index.html"><img src="assets/img/logo.png" alt="" /></a>
+            </div>
+            <!-- <div class="nav-list">
+              <span class="btn">
+                <a href="login.html"> Login </a>
+              </span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="form-area">
+        <div class="container">
+          <h3>To Do Lists 2022</h3>
+          <form action="" id="form">
+            <div class="textInput">
+              <input type="text" placeholder="What are you planing today..." id="note" />
+              <span class="material-icons-outlined"> sticky_note_2 </span>
+            </div>
+            <button type="submit" id="addNote">Add Note</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="todo-list-wrapper">
+        <div class="container">
+          <h3>All Notes</h3>
+          <div class="list-area">
+            
+            <!-- <div class="list">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit as. Autem
+                accusantium numquam quasi delectus deleniti. Quia omnis
+              </p>
+              <span class="material-icons-outlined"> clear </span>
+            </div> -->
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="clock-wrrapper">
+
+      <div class="clock">
+        <div class="clock-face">
+          <div class="hand hours"></div>
+          <div class="hand minutes"></div>
+          <div class="hand seconds"></div>
+
+          <div class="hand-center"></div>
+        </div>
+      </div>
+
+      <h2>
+        <span class="digiTime"></span>
+      </h2>
+    </div>
+
+
+    <script src="assets/js/clock.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

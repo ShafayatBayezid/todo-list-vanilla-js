@@ -1,0 +1,47 @@
+.todo-list-wrapper {
+  margin: 50px 0;
+}
+.list-area {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--listBG);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.list p {
+  width: calc(100% - 45px);
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+.list span {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--clr-white);
+  background-color: var(--clr-todo-yellow);
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+.list span:hover {
+  background-color: var(--clr-todo-paste);
+}
+
+@media only screen and (max-width: 650px) {
+  .list-area {
+    grid-template-columns: 1fr;
+  }
+}

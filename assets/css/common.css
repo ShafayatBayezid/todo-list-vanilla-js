@@ -91,9 +91,6 @@ h6 {
   width: 100%;
 }
 
-.nav .nav-list {
-  /* display: none; */
-}
 .nav-list .btn {
   color: var(--clr-white);
   background-color: var(--clr-todo-yellow);

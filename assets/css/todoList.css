@@ -15,6 +15,15 @@
   padding: 10px 15px;
   border-radius: 5px;
 }
+.list-area .list input{
+ width: 100%;
+  height: 100%;
+  border: none;
+  padding: 10px 0 ;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+}
 .list p {
   width: calc(100% - 45px);
   display: flex;
@@ -28,14 +37,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 780;
   color: var(--clr-white);
   background-color: var(--clr-todo-yellow);
   border-radius: 50%;
   transition: all .3s ease-in-out;
   cursor: pointer;
 }
+
 .list span:hover {
   background-color: var(--clr-todo-paste);
 }

@@ -27,11 +27,22 @@
             <div class="brand-logo">
               <a href="index.html"><img src="assets/img/logo.png" alt="" /></a>
             </div>
-            <!-- <div class="nav-list">
-              <span class="btn">
+            <div class="nav-list">
+              <a
+                class="git-area"
+                href="https://github.com/ShafayatBayezid/todo-list-vanilla-js"
+                target="_blank"
+              >
+                <span>Source on</span>
+                <div class="git-logo">
+                  <img src="assets/img/git-logo.png" alt="" />
+                </div>
+              </a>
+
+              <!-- <span class="btn">
                 <a href="login.html"> Login </a>
-              </span>
-            </div> -->
+              </span> -->
+            </div>
           </div>
         </div>
       </div>
@@ -41,7 +52,11 @@
           <h3 class="form-title">Add your daily Notes</h3>
           <form action="" id="form">
             <div class="textInput">
-              <input type="text" placeholder="What are you planing today..." id="note" />
+              <input
+                type="text"
+                placeholder="What are you planing today..."
+                id="note"
+              />
               <span class="material-icons-outlined"> sticky_note_2 </span>
             </div>
             <button type="submit" id="addNote">Add Note</button>
@@ -50,10 +65,9 @@
       </div>
 
       <div class="todo-list-wrapper">
-        <div class="container">          
+        <div class="container">
           <h3 class="form-title">All Notes</h3>
           <div class="list-area">
-            
             <!-- <div class="list">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit as. Autem
@@ -61,16 +75,21 @@
               </p>
               <span class="material-icons-outlined"> clear </span>
             </div> -->
-            
           </div>
         </div>
       </div>
     </div>
 
-
+    <footer>
+      <p>
+        Copyright &copy
+        <a href="https://shafayat.net/" target="_blank"
+          >Shafayat Hossain Bayezid</a
+        >
+      </p>
+    </footer>
 
     <div class="clock-wrrapper">
-
       <div class="clock">
         <div class="clock-face">
           <div class="hand hours"></div>
@@ -80,12 +99,11 @@
           <div class="hand-center"></div>
         </div>
       </div>
-
-      <h2>
+      <p class="git-link"><a href="https://shafayat.net/jsClock/" target="_blank">Visit here</a></p>
+      <!--  <h2>
         <span class="digiTime"></span>
-      </h2>
+      </h2> -->
     </div>
-
 
     <script src="assets/js/clock.js"></script>
     <script src="assets/js/main.js"></script>

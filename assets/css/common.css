@@ -91,6 +91,41 @@ h6 {
   width: 100%;
 }
 
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-list .git-area {
+  display: flex;
+  transition: all 1s ease-in-out; 
+  cursor: pointer;
+}
+
+.nav-list .git-area span{
+  opacity: 0;
+  margin-right: -30px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all .3s ease-in-out;
+  color: var(--clr-todo-yellow);
+}
+
+
+.nav-list .git-area:hover span {
+  opacity: 1;
+  margin-right: 8px;
+}
+
+
+.nav-list .git-area .git-logo {
+  width: 30px;
+  height: 30px;
+}
+.nav-list .git-logo img {
+  width: 100%;
+}
+
 .nav-list .btn {
   color: var(--clr-white);
   background-color: var(--clr-todo-yellow);
@@ -107,7 +142,7 @@ h6 {
 .nav-list .btn a {
   color: var(--clr-white);
 }
-.nav-list .btn:hover{
+.nav-list .btn:hover {
   background-color: var(--clr-todo-paste);
 }
 
@@ -127,4 +162,12 @@ button {
 }
 button:hover {
   background-color: var(--clr-todo-paste);
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid #ccc;
 }

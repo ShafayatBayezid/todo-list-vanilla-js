@@ -62,7 +62,6 @@
 
 .digiTime {
   margin-right: 20px;
-  display: none;
   visibility: hidden;
 }
 .digiTime {
@@ -72,7 +71,17 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.git-link{
+  position: absolute;
+  top: -50px;
+  left: 30px;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  text-transform: capitalize;
+}
+.clock-wrrapper:hover .git-link{
+  opacity: 1;
+}
 @media only screen and (max-width: 650px) {
   .digiTime {
     display: block;

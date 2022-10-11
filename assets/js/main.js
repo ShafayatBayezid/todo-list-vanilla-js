@@ -1,7 +1,14 @@
-window.addEventListener("load", (e) => {
+window.addEventListener("load", () => {
   var form = document.querySelector("#form");
   var textInput = document.querySelector("#note");
   var listArea = document.querySelector(".list-area");
+
+  var toggleBtn = document.querySelector(".toggleBtn");
+  var body = document.querySelector('body');
+  
+  toggleBtn.onclick = () => {
+    body.classList.toggle('dark');
+  }
 
   //get form element from DOM
   form.addEventListener("submit", (e) => {

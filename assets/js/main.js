@@ -5,6 +5,7 @@ window.addEventListener("load", () => {
 
   var toggleBtn = document.querySelector(".toggleBtn");
   var body = document.querySelector('body');
+
   
   toggleBtn.onclick = () => {
     body.classList.toggle('dark');
@@ -31,6 +32,8 @@ window.addEventListener("load", () => {
 
       list_el.appendChild(p_el);
       list_el.appendChild(span_el);
+      
+
       listArea.appendChild(list_el);
 
       textInput.value = "";

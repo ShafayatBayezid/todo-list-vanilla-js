@@ -15,7 +15,15 @@
   padding: 10px 15px;
   border-radius: 5px;
 }
-.list-area .list input{
+.dark .list {
+  background: rgba(47, 42, 42, 0.35);
+  box-shadow: 0 2px 15px 0 var(--shadow-dark);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.8);
+}
+/* .list-area .list input{
  width: 100%;
   height: 100%;
   border: none;
@@ -23,7 +31,7 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 5px;
-}
+} */
 .list p {
   width: calc(100% - 45px);
   display: flex;
@@ -32,24 +40,24 @@
 }
 .list span {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  font-size: 15px;
+  width: 40px;
+  height: 100%;
+  font-size: 20px;
   font-weight: 780;
-  color: var(--clr-white);
-  background-color: var(--clr-todo-yellow);
-  border-radius: 50%;
-  transition: all .3s ease-in-out;
+  color: var(--clr-todo-yellow);
+  /* background-color: var(--clr-todo-yellow); */
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.list span:hover {
-  background-color: var(--clr-todo-paste);
+.dark .list span {
+  color: var(--clr-white);
 }
 
 @media only screen and (max-width: 650px) {

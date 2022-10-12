@@ -11,7 +11,7 @@
 :root {
   --bodyBackground: #f2f4f8;
   --bodyBackgroundDark: #313131;
-  --listBG: #e4e8ee;
+  --listBG: #e4e8ee; 
   --clr-todo-yellow: #f58725;
   --clr-todo-paste: #3cbcad;
   --clr-black: #000;
@@ -19,6 +19,9 @@
   --clr-gray: #ccc;
   --clr-white: #fff;
   --clr-red: #cf4040;
+
+  --shadow-dark: rgba(78, 79, 80, 0.5);
+  
   --font-poppins: "Poppins", sans-serif;
 }
 
@@ -28,6 +31,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  transition: all .3s ease-in-out;
 }
 
 body {
@@ -40,12 +44,18 @@ body {
   visibility: visible;
   color: var(--clr-dark-1);
 }
-body.dark{
-   background-color: var(--bodyBackgroundDark);
+
+ 
+body.dark {
+  background-color: var(--bodyBackgroundDark);
 }
 a {
   text-decoration: none;
   display: inline-block;
+}
+
+.dark a {
+  color: rgba(255, 255, 255, 0.58);
 }
 h1,
 h2,
@@ -57,6 +67,14 @@ h6 {
   font-weight: 400;
   margin-top: 0;
   font-family: var(--font-poppins);
+}
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: var(--clr-white);
 }
 
 .body-wrapper {
@@ -74,11 +92,18 @@ h6 {
 }
 
 /* nav styles */
+
 .nav-area {
-  background-color: var(--clr-white);
+  background-color: var(--clr-bodyBackground);
   box-shadow: 0px 7px 10px 0px rgba(181, 181, 181, 0.75);
   -webkit-box-shadow: 0px 7px 10px 0px rgba(181, 181, 181, 0.75);
   -moz-box-shadow: 0px 7px 10px 0px rgba(181, 181, 181, 0.75);
+}
+.dark .nav-area {
+  background-color: var(--clr-bodyBackgroundDark);
+  box-shadow: 0px 7px 10px 0px rgba(41, 35, 35, 0.75);
+  -webkit-box-shadow: 0px 7px 10px 0px rgba(41, 35, 35, 0.75);
+  -moz-box-shadow: 0px 7px 10px 0px rgba(41, 35, 35, 0.75);
 }
 
 .nav {
@@ -102,25 +127,28 @@ h6 {
 }
 .nav-list .git-area {
   display: flex;
-  transition: all 1s ease-in-out; 
+  transition: all 1s ease-in-out;
   cursor: pointer;
 }
 
-.nav-list .git-area span{
+.nav-list .git-area span {
   opacity: 0;
   margin-right: -30px;
   font-weight: 600;
   font-size: 15px;
-  transition: all .3s ease-in-out;
-  color: var(--clr-todo-yellow);
+  transition: all 0.3s ease-in-out;
+  color: transparent;
 }
-
 
 .nav-list .git-area:hover span {
   opacity: 1;
   margin-right: 8px;
+  color: var(--clr-todo-yellow);
 }
 
+.dark .nav-list .git-area:hover span {
+  color: rgba(255, 255, 255, 0.58);
+}
 
 .nav-list .git-area .git-logo {
   width: 30px;
@@ -149,6 +177,17 @@ h6 {
 .nav-list .btn:hover {
   background-color: var(--clr-todo-paste);
 }
+.dark .nav-list .btn {
+  background: rgba(47, 42, 42, 0.35);
+  box-shadow: 0 2px 15px 0 var(--shadow-dark);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.dark .nav-list .btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
 
 /* button styles */
 button {
@@ -164,9 +203,23 @@ button {
   text-align: center;
   cursor: pointer;
 }
+
 button:hover {
   background-color: var(--clr-todo-paste);
 }
+.dark button{
+  background: rgba(47, 42, 42, 0.35);
+  box-shadow: 0 2px 15px 0 var(--shadow-dark);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.dark button:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 
 footer {
   text-align: center;
@@ -174,10 +227,16 @@ footer {
   width: 100%;
   bottom: 0;
   border-top: 1px solid #ccc;
+  background-color: var(--bodyBackground);
+}
+.dark footer{
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.58);
+  background-color: var(--bodyBackgroundDark);
 }
 
-.toggleBtn{
-  content: '';
+.toggleBtn {
+  content: "";
   position: absolute;
   top: 100px;
   right: 70px;
@@ -187,8 +246,9 @@ footer {
   background-color: var(--clr-dark-1);
   box-shadow: 1px 1px 8px 1px var(--clr-black);
   z-index: 999;
+  cursor: pointer;
 }
-.dark .toggleBtn{
+.dark .toggleBtn {
   background-color: var(--bodyBackground);
   box-shadow: 1px 1px 8px 1px var(--clr-white);
 }
